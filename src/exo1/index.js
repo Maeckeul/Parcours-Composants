@@ -19,6 +19,21 @@
  * Import
  */
 import test from './test';
+// ce qui a été exporté ailleurs peut être importé
+// un import nommé se fait entre accolades
+// on précise le chemin (en commançant pas ./ si c'est dans le dossier courant)
+// on peut omettre l'extension .js
+// si le fichier s'appelle index on peut omettre son nom
+// on peut importer plusieurs choses d'un coup avec des virgules
+// pour un import nommé on respecte le nom d'origine
+// import { coucou, salut } from './hello';
+
+// l'import par défaut est sans accolade
+// on pourrait importer l'import par défaut sous le nom qu'on veut
+// import hello from './hello';
+
+// import par défaurt et nommé en 1 fois :
+import hello, { coucou, salut } from './hello';
 
 
 /*
