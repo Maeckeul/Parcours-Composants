@@ -7,6 +7,8 @@ const hello = () => 'hello';
 // avec un export par défaut on n'exporte que la valeur
 // ici ce que j'exporte c'est () => 'hello';
 export default hello;
+// on pourrait exporter aussi directement la valeur
+// export default () => 'hello';
 
 // on peut aussi fait un export nommé après coup entre accolades,
 // on peut aussi exporter plusieurs choses d'un coup en les séparant par des virgules
