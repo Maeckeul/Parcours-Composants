@@ -34,7 +34,13 @@ import test from './test';
 
 // import par défaurt et nommé en 1 fois :
 import hello, { coucou, salut } from './hello';
+// on peut renommer à la volée un import nommé par exemple pour éviter les conflis
+// pour cela on utilise as
+import sum, { salut as displaySomething } from './math';
 
+console.log(sum(5, 2));
+salut(); // -> salut de hello.js
+displaySomething(); // -> salut de math.js
 
 /*
  * Tests
