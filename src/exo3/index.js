@@ -53,7 +53,7 @@ import test from './test';
 const HelloWorld = ({ method, lang }) => (
   <div id="hello-world">
     <h1>Ce HTML a été généré par {method}</h1>
-    <h2>Et affiché avec {lang} {1 + 2}</h2>
+    <h2>Et affiché avec {lang}</h2>
   </div>
 );
 
@@ -69,7 +69,7 @@ const HelloWorld = ({ method, lang }) => (
 
 
 const rootDomElement = document.getElementById('root');
-render(<HelloWorld method="Gros minet" lang="Titi" />, rootDomElement);
+render(<HelloWorld method="React" lang="React-Dom" />, rootDomElement);
 
 /*
  * Tests
