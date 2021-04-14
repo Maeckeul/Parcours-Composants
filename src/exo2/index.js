@@ -23,13 +23,27 @@
 /*
  * Npm import
  */
-
+import React from 'react';
+import { render } from 'react-dom';
+import './style.css';
 
 /*
  * Local import
  */
 import test from './test';
 
+// const paragraph = <p>Hello World</p>;
+
+const HelloWorld = () => (
+  <div id="hello-world">
+    <h1>Ce HTML a été généré par React</h1>
+    <h2>Et affiché avec ReactDOM</h2>
+  </div>
+);
+
+const rootDomElement = document.getElementById('root');
+
+render(<HelloWorld />, rootDomElement);
 
 /*
  * Code
