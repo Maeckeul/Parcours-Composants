@@ -41,46 +41,33 @@
 /*
  * Import
  */
-
-import React from 'react';
+import React from 'react'; 
 import { render } from 'react-dom';
-
 import test from './test';
+
 /*
  * Code
  */
-
-const HelloWorld = ({ method, lang, children }) => (
-  <div id="hello-world">
-    <h1>Ce HTML a été généré par {method}</h1>
-    <h2>Et affiché avec {lang}</h2>
-    {children}
-  </div>
-);
-
-// // version classique
-// HelloWorld({
-//   method: 'Gros minet',
-//   lang: 'titi',
-//   children: <p>Coucou</p>, // React.createElement('p', null, 'Coucou')
-// });
-// version JSX, on passe à une balise englobant pour mettre l'enfant dedans
-/* <HelloWorld method="Gros minet" lang="titi">
-  <p>Coucou</p>
-</HelloWorld> */
-
+const HelloWorld = ( { method, lang, children } ) => {
+  return (
+    <div id="hello-world">
+     <h1>Ce HTML a été généré par { lang }</h1>
+     <h2>Et affiché avec { method }</h2>
+     { children }
+    </div>
+  );
+}; 
 
 const rootDomElement = document.getElementById('root');
 
 const rootReactElement = (
-  <HelloWorld method="Gros minet" lang="titi">
-    <p>Coucou</p>
-    <p>Salut</p>
+  <HelloWorld method="ReactDOM" lang="React">
+    <p>Et c'est super cool !</p>
+    <p>Vous ne trouvez pas ?</p>
   </HelloWorld>
 );
 
 render(rootReactElement, rootDomElement);
-
 /*
  * Tests
  */
